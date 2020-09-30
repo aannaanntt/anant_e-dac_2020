@@ -1,0 +1,280 @@
+1.
+public class pyramidpattern1 {
+
+    public static void main(String[] args) {
+        for(int i=1;i<=9;i++)
+        {
+            for(int j=9;j>=i;j--){
+                System.out.print(" ");
+            }
+            
+        for(int k=1;k<=i;k++)
+        {
+            System.out.print(" "+i);
+        }
+        System.out.println();
+        }
+        
+    }
+    
+}
+===================================================================================================================================================================
+2.
+public class pyramidpattern2 {
+
+    public static void main(String[] args) {
+        for(int i=1;i<=9;i++)
+        {
+            for(int j=9;j>=i;j--){
+                System.out.print(" ");
+            }
+            
+        for(int k=1;k<=i;k++)
+        {
+            System.out.print(" "+k);
+        }
+        System.out.println();
+        }
+        
+    }
+    
+}
+============================================================================================================================================================
+3.
+public class pyramidpattern3 {
+
+    public static void main(String[] args) {
+        for(int i=1;i<=9;i++)
+        {
+            for(int j=9;j>=i;j--){
+                System.out.print(" ");
+            }
+            
+        for(int k=1;k<=i;k++)
+        {
+            System.out.print(" *");
+        }
+        System.out.println();
+        }
+        
+    }
+    
+}
+======================================================================================================================================================
+4.
+public class pyramidpattern6 {
+
+    public static void main(String[] args) {
+        for(int i=1;i<=9;i++)
+        {
+            for(int j=1;j<=i;j++){
+                System.out.print(" ");
+            }
+            
+        for(int k=9;k>=i;k--)
+        {
+            System.out.print(" *");
+        }
+        System.out.println();
+        }
+        
+    }
+===========================================================================================================================================================
+5.
+
+public class pyramidpattern4 {
+
+    public static void main(String[] args) {
+        for(int i=1;i<=9;i++)
+        {
+            for(int j=1;j<=9-i;j++)
+            {
+                System.out.print(" ");
+            }
+           
+            
+        for(int k=1;k<=i*2;k++)
+        {
+            System.out.print(" "+k);
+        }
+        for(int l=i-1;l>0;l--)
+        {
+            System.out.print(" "+l);
+        }
+        System.out.println();
+        }
+        
+        }
+=============================================================================================================================================================
+6.
+public class invertedhalfpyramid 
+{
+
+   public static void main(String[] args) {
+
+        for(int i=1;i<=9;i++)
+        {
+            for(int j=9;j>=i;j--)
+
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+    }
+================================================================================================================================================================
+7.
+public class halfpyramid
+{
+   for(int i=1;i<=9;i++)
+        {
+            for(int j=1;j<=i;j++)
+
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+    }
+=================================================================================================================================================================
+8. public class fullpyramid
+{
+ for(int i=1;i<=9;i++)
+        {
+            for(int j=9;j>=i;j--)
+        {
+            System.out.print(" ");
+        }
+            for(int k=1;k<=i;k++)
+
+            {
+                System.out.print(" *");
+            }
+            System.out.println();
+        }
+===================================================================================================================================================================
+9.
+public class fullhollowpyramid
+{
+public static void main(String[] args)
+{
+for(int i=0;i<=5;i++)
+{
+for(int j=5;j>=i;j--)
+{
+System.out.print(" ");
+}
+for(int k=1;k<=(2*i-1);k++)
+{
+if(k==1||i==5||k==(2*i-1))
+{
+System.out.print("*");
+}
+else
+{
+System.out.print(" ");
+}
+}
+System.out.println();
+}
+==================================================================================================================================================================================
+10.public class pyramidpattern5
+{
+public static void main(String[] args)
+{
+for(int i=9;i>=1;i--)
+{
+for(int j=1;j<=i*2;j++)
+{
+System.out.print(" ");
+}
+for(int k=i;k<=9;k++)
+{
+System.out.print(k+" ");
+}
+for(int m=9-1;m>=i;m--)
+{
+System.out.print(m+" ");
+}
+System.out.println();
+}
+}
+}
+=================================================================================================================================================================================
+11.
+public class pyramidpattern7
+{
+public static void main(String[] args)
+{
+for(int i=1;i<=4;i++)
+{
+for(int j=1;j<=i;j++)
+{
+System.out.print(" ");
+}
+for(int k=4;k>=i;k--)
+{
+System.out.print(" "+k);
+}
+for(int l=3;l>=i;l--)
+{
+System.out.print(" "+l);
+}
+System.out.println();
+}
+}
+}
+===============================================================================================================================================================================
+12.
+public class pyramidpattern7
+{
+public static void main(String[] args)
+{
+for(int i=1;i<=4;i++)
+{
+for(int j=1;j<=i;j++)
+{
+System.out.print(" ");
+}
+for(int k=4;k>=i;k--)
+{
+System.out.print(" "+*);
+}
+for(int l=3;l>=i;l--)
+{
+System.out.print(" "+*);
+}
+System.out.println();
+}
+}
+}
+=====================================================================================================================================================================================
+13. public class hollowinvertedpyramid
+{
+public static void main(String[] args)
+{
+		int  i, j;
+	
+		for(i = 1; i <= 5; i++)
+		{
+		for(j = i; j <= 5; j++)
+		{
+		if
+			(i == 1 || j == 5 || j == i)
+		
+		System.out.print("*");
+		else
+		System.out.print(" ");
+		}
+		
+		System.out.println();
+		}
+
+	}
+}
+}
+====================================================================================================================================================================================================
