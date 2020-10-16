@@ -1,0 +1,244 @@
+1.public class Hello {
+
+	public static void main(String[] args) {
+	System.out.print("Hello");
+
+	}
+
+}
+===========================================================================================================================================================================================
+2.import java.util.Scanner;
+
+public class Hello {
+
+	public static void main(String[] args) {
+		System.out.println("Enter your rollnumber");
+		Scanner sc=new Scanner(System.in);
+		int rollnumber=sc.nextInt();
+		System.out.print("your rollnumber is"+"  "+rollnumber);
+
+	}
+
+}
+========================================================================================================================================================================
+5.
+public class Commandline {
+
+	public static void main(String[] args) {
+		try {
+
+	 System.out.print("welcome"+args[0]);
+	}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+
+}
+}
+====================================================================================================================================================================
+6.
+import java.util.Scanner;
+public class Circle {
+	float pie=3.14f;
+	public void area(float r)
+	{
+		float a =pie*r*r;
+		System.out.println("circle area"+" "+a);
+	}
+public void circum(float r)
+{
+	float e=2*pie*r;
+	System.out.println("circumfrence of circle is"+" "+e);
+}
+	public static void main(String[] args) 
+	{
+		System.out.println("Enter radius of circle");
+		Circle c=new Circle();
+		Scanner sc=new Scanner(System.in);
+		float x=sc.nextFloat();
+		c.area(x);
+		c.circum(x);
+		sc.close();
+	}
+
+}
+===================================================================================================================================================================
+7.
+import java.util.Scanner;
+public class marks {
+
+	public static void main(String[] args) {
+		System.out.println("enter marks of 5 subjects");
+	int sum=0;
+	
+		for(int i=1;i<=5;i++)
+		{
+			Scanner sc=new Scanner(System.in);
+			int a=sc.nextInt();
+			sum=sum+a;
+			System.out.println("sum of marks is"+sum);
+			sc.close();
+		}
+		float z=sum/5;
+		System.out.println("percentage of your marks is"+z+"%");
+
+	
+	}
+		
+	}
+====================================================================================================================================================================
+3.
+import java.util.Scanner;
+
+public class Hello {
+	void zig(int x)
+	{
+	 int y;
+	 y=x*x+3*x-7;
+	 System.out.println(y);
+	}
+void zag(int x)
+{
+	int y;
+
+	y=x++ + ++x;
+
+
+System.out.println(y);
+System.out.println(x);
+	}
+void jog(int x,int y)
+{
+	int z;
+	z=x++ - --y - --x + x++;
+	System.out.println(z);
+}
+void run(){
+	boolean x=false;
+	boolean y=true;
+	boolean z=x&&y||!(x||y);
+	System.out.print(z);
+}
+
+	public static void main(String[] args) {
+	 System.out.println("enter value 1");
+		Scanner sc=new Scanner(System.in);
+		int a=sc.nextInt();
+		Hello h=new Hello();
+		h.zig(a);
+		 System.out.println("enter value 1");
+	    int b=sc.nextInt();
+		h.zag(b);
+		 System.out.println("enter value 2");
+		int e=sc.nextInt();
+		int f=sc.nextInt();
+		h.jog(e,f);
+		h.run();
+	}
+
+}
+=================================================================================================================================================================================
+4.
+import java.util.Scanner;
+public class Byte {
+
+	public static void main(String[] args) {
+		System.out.println("Enter 2 numbers");
+		Scanner sc=new Scanner(System.in);
+	         byte a=sc.nextByte();
+		byte  b=sc.nextByte();
+		int c=a+b;
+		System.out.println(c);
+	}
+
+}
+=================================================================================================================================================================
+8.
+import java.util.Scanner;
+
+public class Simpleinterest {
+public	static void si(double p,double r,double t)
+	{
+		double simpleinterest=(p*r*t)/100*100;
+		
+		System.out.println(simpleinterest);
+	}
+
+	public static void main(String[] args) 
+	{  System.out.println("Enter principal");
+		Scanner sc=new Scanner(System.in);
+		double d=sc.nextDouble();
+		System.out.println("Enter rate of interest");
+		double r=sc.nextDouble();
+	   System.out.println("Enter time");
+		double w=sc.nextDouble();
+		Simpleinterest.si(d,r,w);
+        sc.close();
+		
+		
+	}
+
+}
+==================================================================================================================================================================
+10.
+import java.util.Scanner;
+public class Ctof {
+	
+	Ctof(double d)
+	{
+		double c=5*(d-32)/9;
+		System.out.print("Temperature in celcius is"+c+" ");
+	}
+
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter trmperature in fahrenheit");
+		double fah=sc.nextDouble();
+		Ctof c=new Ctof(fah);
+		sc.close();
+	
+	}
+
+}
+===================================================================================================================================================================
+12.
+import java.util.Scanner;
+public class Salary 
+{
+	void zag(float y)
+	{
+		if(y<10000)
+		{
+			double hra=0.10*y;
+			double da=0.90*y;
+			double gs=y+hra+da;
+			System.out.println("your gross salary is"+" "+gs);
+		}
+		
+		else if(y>=10000)
+		{
+			double hra=2000;
+			double da=0.98*y;
+			double gs=y+hra+da;
+			System.out.println("your gross salary is"+" "+gs);
+		}
+	}
+	
+	
+
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter your basic salary");
+		float basicsalary=sc.nextFloat();
+		System.out.println("your basic salary is "+" "+basicsalary);
+		Salary s=new Salary();
+		s.zag(basicsalary);
+		sc.close();
+	
+	}
+
+}
+===================================================================================================================================================================
