@@ -1,0 +1,105 @@
+import java.util.Scanner;
+public class Arms {
+
+	public static void main(String[] args) 
+
+	{
+		System.out.println("Enter number to check");
+		Scanner sc=new Scanner(System.in);
+		int num=sc.nextInt();
+	    int c=0;
+		int temp=num;
+		int a;
+		while(num>0)
+		{
+			a=num%10;
+		    
+			 c=c+(a*a*a);
+			 num=num/10;
+		}
+		if (temp==c) 
+		{
+			System.out.println("armstrong");
+		}
+		else
+		{
+			System.out.print("not armstrong");
+		}
+}
+}
+========================================================================================================================================================
+import java.util.Scanner;
+public class Fibonacci {
+	void fib(int d)
+	{ 
+		
+		int a=0;
+		int b=1;
+		int sum=0;
+				for(int i=d;i>=0;i--)
+				{
+					sum=a+b;
+					System.out.print(sum+"  ");
+					a=b;
+					b=sum;
+					
+				}
+				
+	}
+
+	public static void main(String[] args)
+{
+		System.out.println("enter the number");
+		Scanner sc=new Scanner(System.in);
+		int c=sc.nextInt();
+		Fibonacci fb=new Fibonacci();
+		fb.fib(c);
+      sc.close();
+	
+
+}
+}
+=======================================================================================================================================================================
+odd and prime number
+import java.util.Scanner;
+
+public class Poe 
+{
+	void evn(int d)
+	{
+		String s=(d%2==0)?"number is even ":"number is odd";
+		System.out.println(s);
+	}
+void prime(int d)
+{ 
+	int temp=0;
+	for(int i=1;i<=d-1;i++)
+	{
+		if(d%i==0)
+		{
+			temp=temp+1;
+		}
+		}
+	if(temp==1)
+	{
+		System.out.println("prime");
+	}
+	else 
+	{
+		System.out.println("not prime");
+	}
+}
+	public static void main(String[] args) 
+	{
+		Poe p=new Poe();
+		System.out.println("enter number to check");
+		Scanner sc=new Scanner(System.in);
+		int c=sc.nextInt();
+		p.evn(c);
+		p.prime(c);
+		sc.close();
+
+	}
+
+}
+===================================================================================================================================================================================
