@@ -1,0 +1,252 @@
+que1
+import java.util.Scanner;
+public class Table{
+ public static void main(String[] args){
+   Scanner sc=new Scanner(System.in);
+   System.out.print("Enter number:");
+   int n=sc.nextInt();
+   for(int i=1;i<=10;i++){
+     System.out.println(n+"x"+i+"="+(n*i));
+    }   
+  }
+}
+----------------------------------------------------------------------
+que2
+import java.util.Scanner;
+public class Reverse{
+ public static void main(String[] args){
+   Scanner sc=new Scanner(System.in);
+   System.out.print("Enter number:");
+   int n=sc.nextInt();
+   int rem;
+   int reverse=0;
+  System.out.print("Reverse number:");
+  while(n>0)
+  { 
+    rem=n%10;
+    System.out.print(rem);
+    n=n/10;
+   }
+  }
+}
+------------------------------------------------------------------------
+que3
+import java.util.Scanner;
+public class Prime{
+ public static void main(String[] args){
+   Scanner sc=new Scanner(System.in);
+   System.out.print("Enter number:");
+   int n=sc.nextInt();
+   
+    boolean prime=true;
+    for(int i=2;i<=n-1;i++){
+     if (n%i==0){
+          prime=false;
+          break;
+       }
+        prime=true;
+    }   
+    System.out.println(prime?"prime number":"not prime number");
+  }
+}
+---------------------------------------------------------------------------
+que4
+import java.util.Scanner;
+public class Series{
+ public static void main(String[] args){
+   Scanner sc=new Scanner(System.in);
+   System.out.print("Enter number of iteration:");
+   int n=sc.nextInt(); 
+   int add=12;
+   for(int i=2;i<=n;i++){
+     add=add+10;
+    }   
+    System.out.println("Addition Of series upto "+n+"iterations="+add );
+  }
+}
+------------------------------------------------------------------------------
+que5
+import java.util.Scanner;
+public class Primetill{
+ public static void main(String[] args){
+   Scanner sc=new Scanner(System.in);
+   System.out.print("Enter start number:");
+   int s=sc.nextInt();
+   System.out.print("Enter end number:");
+   int e=sc.nextInt();
+   prime(s,e);
+  }
+   
+  public static void prime(int s,int e){
+    for(int n=s;n<=e;n++){
+        if(check(n)){
+          System.out.print(n+" ");
+        }
+     }
+   } 
+   
+    public static boolean check(int n){
+     for(int i=2;i<=n-1;i++){
+     if (n%i==0){
+          return false;
+       }
+     }
+     return true;
+    }
+ 
+}
+---------------------------------------------------------------------------------------
+que6
+import java.util.Scanner;
+public class Arraysum{
+ public static void main(String[] args){
+   Scanner sc=new Scanner(System.in);
+   System.out.println("Enter array element:");
+   int arr[]=new int[10];
+   int add=0;
+   int mult=1;
+
+   for(int i=0;i<10;i++){
+    System.out.print("Enter "+(i+1)+" element:");
+     arr[i]=sc.nextInt(); 
+     add=add+arr[i];
+     mult=mult*arr[i];
+    }   
+    System.out.println("Addition of array element="+ add );
+    System.out.println("Multilication of array element="+ mult );
+  }
+}
+--------------------------------------------------------------------------------------
+que7
+import java.util.Scanner;
+public class Arraydescend{
+ public static void main(String[] args){
+   Scanner sc=new Scanner(System.in);
+   System.out.println("Enter array element:");
+   int arr[]=new int[10];
+  
+   for(int i=0;i<10;i++){
+    System.out.print("Enter "+(i+1)+" element:");
+     arr[i]=sc.nextInt(); 
+    }   
+     
+      //int  max=arr[0];        //consider 0 index element is max and min for starting
+      //int min=arr[0];
+      int temp;
+     
+    for(int i=0;i<10;i++){      //to take all elements in array  suppose i=0 arr[4]
+      for(int j=0;j<i;j++){     //check upto that index          check for arr[0] arr[1] arr[2] arr[3]
+          if (arr[i]>arr[j]){   //  after swapping also we check all previous element // i for actual values in array j for iterate array element
+              temp=arr[i];  
+              arr[i]=arr[j];       //just swap max number at first and then min number so we will get max-min series that is in descending order
+              arr[j]=temp;
+             }
+         }
+      }
+     
+     System.out.println("Descending order");
+      for(int i=0;i<10;i++)
+     {
+       System.out.println("arr["+i+"]="+arr[i]);
+      } 
+   
+     for(int i=0;i<10;i++){
+        for(int j=0;j<i;j++){
+            if(arr[i]<arr[j]){
+              temp=arr[i];
+              arr[i]=arr[j];    
+              arr[j]=temp;
+           }
+        }
+      }
+      System.out.println("Ascending order");
+      for(int i=0;i<10;i++){
+           System.out.println("arr["+i+"]="+arr[i]);
+       }
+  }
+}
+--------------------------------------------------------------------------------
+que8
+import java.util.Scanner;
+public class Arrayrev{
+ public static void main(String[] args){
+   Scanner sc=new Scanner(System.in);
+   System.out.println("Enter array element:");
+   int arr[]=new int[10];
+
+   for(int i=0;i<10;i++){
+    System.out.print("Enter "+(i+1)+" element:");
+     arr[i]=sc.nextInt(); 
+    } 
+   System.out.println("Given array:");
+   for(int i=0;i<10;i++){
+    System.out.println("arr["+i+"]="+arr[i]);
+   }  
+   System.out.println("reverse array:");
+   
+   int rev[]=new int[10];
+   for(int i=9,j=0; i>=0; i--,j++){
+     rev[j]=arr[i]; 
+    } 
+   for(int j=0;j<10;j++){
+    System.out.println("arr["+j+"]="+rev[j]);
+   }  
+
+  }
+}
+-----------------------------------------------------------------------------------
+que9
+import java.util.Scanner;
+public class Arraysearch{
+ public static void main(String[] args){
+   Scanner sc=new Scanner(System.in);
+   System.out.println("Enter array element:");
+   int arr[]=new int[10];
+
+   for(int i=0;i<10;i++){
+    System.out.print("Enter "+(i+1)+" element:");
+     arr[i]=sc.nextInt(); 
+    }   
+    System.out.println("Enter element to search in array:" );
+    int x=sc.nextInt();
+    boolean found=true;
+     for(int i=0;i<10;i++){
+          if(x==arr[i]){
+             found=true;
+             break;   
+          }
+          else{
+           found=false;
+           continue; 
+          }
+     }
+    
+   System.out.println(found?"Entered element found in array":"Entered element Not found in array" );
+  }
+}
+-------------------------------------------------------------------------------------
+que10
+import java.util.Scanner;
+public class Arraysumeven{
+ public static void main(String[] args){
+   Scanner sc=new Scanner(System.in);
+   System.out.println("Enter array element:");
+   int arr[]=new int[10];
+   int addeven=0;
+   int addodd=0;   
+
+   for(int i=0;i<10;i++){
+    System.out.print("Enter "+(i+1)+" element:");
+     arr[i]=sc.nextInt(); 
+       if (arr[i]%2==0){
+         addeven=addeven+arr[i]; 
+       } 
+       else if (arr[i]%2==1){
+         addodd=addodd+arr[i]; 
+       }
+    }   
+    System.out.println("Addition of even array element="+ addeven );
+    System.out.println("Addition of odd array element="+ addodd );
+  }
+}
+-------------------------------------------------------------------------------------------
