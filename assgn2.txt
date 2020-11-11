@@ -1,0 +1,331 @@
+package ClassObjectInheritance;
+import java.util.Scanner;
+class Product{
+	int pid;
+	double price;
+	int quantity;
+	Product(int pid,double price,int quantity){
+		this.pid=pid;
+		this.price=price;
+		this.quantity=quantity;
+	}
+	void detail(){
+		System.out.println("process ID="+pid);
+		System.out.println("price="+price);
+		System.out.println("quantity="+quantity);
+	}
+}
+
+public class ProductDemo {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+        Product prod[]=new Product[5];
+        for(int i=0;i<5;i++) {
+        	int pid=sc.nextInt();
+    		double price=sc.nextDouble();
+    		int quantity=sc.nextInt();
+    		prod[i]=new Product(pid,price,quantity);
+        }
+        double max=prod[0].price;
+        int index=0;
+        for(int i=0;i<5;i++) {
+        	if(prod[i].price>max) {
+        		max=prod[i].price;
+        		index=i;
+        	}
+        }
+        sc.close();
+        prod[index].detail();
+        
+	}
+
+}
+=====================================================================================================================================================================================
+2
+package ClassObjectInheritance;
+
+class Student {
+	int rollno;
+	 String name;
+	 void setData(int rollno,String name) {
+		 this.rollno=rollno;
+		 this.name=name;
+	 }
+	 void showData() {
+		 System.out.println(rollno);
+		 System.out.println(name);
+	 }
+}
+public class StudentDemo {
+
+	public static void main(String[] args) {
+		Student stud=new Student();
+		stud.setData(14, "Anant");
+		stud.showData();
+
+	}
+
+}
+========================================================================================================================================================================
+3.
+package ClassObjectInheritance;
+class StudentGS{
+	private int rollno;
+	private String name;
+	public void setRollNo(int r) {
+		rollno=r;
+	}
+	public int getRollNO() {
+		return rollno;
+	}
+	public void setName(String s) {
+		name=s;
+	}
+	public String getName() {
+		return name;
+	}
+}
+public class StudentGetSet {
+
+	public static void main(String[] args) {
+		StudentGS sgs=new StudentGS();
+		sgs.setRollNo(16);
+        sgs.setName("Anant");
+        
+        System.out.println(sgs.getRollNO());
+        System.out.println(sgs.getName());
+	}
+
+}
+=======================================================================================================================================================================
+4.
+package ClassObjectInheritance;
+abstract class Processor {
+	int data;  
+	void showData() {
+		System.out.println(data);
+	}
+	abstract void process() ;
+}
+class  Factorial extends Processor {
+	 void process() {
+		 int fact=1;
+		 for(int i=1;i<=10;i++) {
+			 fact=fact*i;
+		 }
+		 System.out.println(fact);
+	 }
+}
+class  Circles extends Processor {
+	 void process() {
+		 int r=1;
+		 double area=Math.PI*r*r;
+		 System.out.println(area);
+	 }
+}
+public class AbstractDemo {
+
+	public static void main(String[] args) {
+		Processor p=new Factorial();
+		p.process();
+		
+		Processor c=new  Circles();
+        c.process();
+	}
+
+}
+============================================================================================================================================================================
+5
+package ClassObjectInheritance;
+import java.util.Scanner;
+
+class Circle {
+	double radius;
+	double area;
+	double arearound;
+	
+	void init(double radius) {
+		this.radius=radius;
+	}
+	void calculateArea() {
+		this.area=2*Math.PI*radius;
+	}
+	void display() {
+		System.out.println(area);
+		arearound=Math.round(area*100.0)/100.0;
+		System.out.println(arearound);
+	}
+}
+public class CircleDemo {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter radius:");
+		double r=sc.nextDouble();
+		sc.close();
+		Circle c=new Circle();
+		c.init(r);
+		c.calculateArea();
+		c.display();
+	}
+
+}
+===========================================================================================================================================================================
+6.
+package ClassObjectInheritance;
+class Employee{
+	int empNo;
+	double salary=10000;
+	double totalSalary;
+	
+	 Employee(int empNo){
+		 this.empNo=empNo;
+	 }
+	 double  totalSalary() {
+		this.totalSalary=empNo*salary;
+		return totalSalary;
+	} 
+	void displaytotal() {
+		System.out.println("display no. of employees="+this.empNo);
+		System.out.println("total of their salaries="+ this.totalSalary);
+	} 
+}
+public class EmployeeDemo {
+    
+	public static void main(String[] args) {
+		 Employee emp=new Employee(1);
+		 emp.totalSalary();
+		 emp.displaytotal();
+	}
+
+}
+=========================================================================================================================================================================
+7.
+package ClassObjectInheritance;
+import java.util.Scanner;
+class OneBHK {
+	double roomArea;
+	double hallArea;
+	double price;
+	OneBHK(double roomArea,double hallArea,double price){
+		this.roomArea=roomArea;
+		this.hallArea=hallArea;
+		this.price=price;
+	}
+	void show() {
+		System.out.println(roomArea);
+		System.out.println(hallArea);
+		System.out.println(price);
+	}
+}
+class TwoBHK extends OneBHK {
+	double room2Area;
+	
+	TwoBHK(double ra,double ha,double p,double r2a){
+		super(ra,ha,p);
+		this.room2Area=r2a;
+	}
+	void show() {
+		super.show();
+		System.out.println(room2Area);
+	}
+}
+public class Flat {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		TwoBHK tbhk[]=new TwoBHK[3];
+		for(int i=0;i<5;i++) {
+			double ra=sc.nextDouble();
+			double ha=sc.nextDouble();
+			double p=sc.nextDouble();
+			double r2a=sc.nextDouble();
+			tbhk[i]=new TwoBHK(ra,ha,p,r2a);
+		}
+		sc.close();
+		for(int i=0;i<5;i++) {
+			tbhk[i].show();
+		}
+	}
+
+}
+========================================================================================================================================================================
+7.
+package ClassObjectInheritance;
+class MathOperation1{
+	int multiplyy(int x, int y){
+		int multiplication=x*y;
+		return multiplication;
+	}
+	float multiplyy(float x, float y,float z){
+		float multiplication=x*y*z;
+		return multiplication;
+	}
+	int multiplyy(int arr[]){
+		int multiplication=1;
+		for(int i=0;i<arr.length;i++) {
+			multiplication=multiplication*arr[i];
+		}
+		return multiplication;
+	}
+	double multiplyy(double x, int y){
+		double multiplication=x*y;
+		return multiplication;
+	}
+}
+public class Operations {
+
+	public static void main(String[] args) {
+		MathOperation1 math=new MathOperation1();
+		System.out.println(math.multiplyy(10,5));
+		System.out.println(math.multiplyy(10.0f,5.5f,8.5f));
+		int arr[]= {1,2,3,4,5};
+		System.out.println(math.multiplyy(arr));
+		System.out.println(math.multiplyy(10.0,5));
+	}
+
+}
+==============================================================================================================================================================================================
+8.
+package ClassObjectInheritance;
+
+import java.util.Scanner;
+
+class MathOperation {
+	static int add(int x,int y) {
+		int res=x+y;
+		return res;
+	}
+	static int subtract(int x,int y) {
+		int res=x-y;
+		return res;
+	}
+	static int multiply(int x,int y) {
+		int res=x*y;
+		return res;
+	}
+	static int power(int x,int y) {
+		int res=1;
+		for(int i=1;i<=y;i++) {
+			res=res*x;
+		}
+		return res;
+	}
+}
+public class Demo {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter first number:");
+		int f=sc.nextInt();
+		System.out.print("Enter second number:");
+		int s=sc.nextInt();
+		sc.close();
+		System.out.println(MathOperation.add(f,s));
+		System.out.println(MathOperation.subtract(f,s));
+		System.out.println(MathOperation.multiply(f,s));
+		System.out.println(MathOperation.power(f,s));
+	}
+
+}
