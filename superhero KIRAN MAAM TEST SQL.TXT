@@ -1,0 +1,86 @@
+ Select NAME, LENGTH(NAME) FROM Superhero Where LENGTH(NAME)<7 ORDER BY ID;
+SELECT ID,Name FROM Superhero WHERE LATITUDE<50 AND LONGITUDE<50;
+
+
+===========================================================================================================================
+DELIMITER $$
+CREATE PROCEDURE Table1()
+BEGIN
+CREATE TABLE Superhero(
+ID int(5) NOT NULL AUTO_INCREMENT,
+NAME VARCHAR(20),
+LATITUDE DECIMAL(4,2),
+LONGITUDE DECIMAL(4,2),
+PRIMARY KEY(ID) );
+END $$
+CALL Table1();
+describe Superhero;
+
+DELIMITER >>
+CREATE PROCEDURE INS(IN nam varchar(20),IN x Decimal(4,2),IN y DECIMAL(4,2))
+BEGIN
+INSERT INTO Superhero(NAME,LATITUDE,LONGITUDE)
+VALUES(nam,x,y);
+END >>
+SELECT * FROM superhero;
+
+
+CALL INS('Spidermen',65.0,65.0);
+CALL INS('Thor',45.0,30.0);
+CALL INS('Deadpool',25.0,69.0);
+CALL INS('Hulk',30.0,20.0);
+CALL INS('Captain America',70.0,75.0);
+CALL INS('Superman',85.0,45.0);
+
+
+DELIMITER ))
+CREATE PROCEDURE see()
+BEGIN
+SELECT NAME,LENGTH(NAME) FROM Superhero WHERE LENGTH(NAME)<7 ORDER BY NAME;
+END ))
+
+CALL see();
+
+========================================================================================================================================================================
+
+2.
+
+DELIMITER $$
+CREATE PROCEDURE Table2()
+BEGIN
+CREATE TABLE Superhero1(
+ID int(5) NOT NULL AUTO_INCREMENT,
+NAME VARCHAR(20),
+LATITUDE DECIMAL(4,2),
+LONGITUDE DECIMAL(4,2),
+PRIMARY KEY(ID) );
+END $$
+CALL Table2();
+describe Superhero1;
+
+DELIMITER >>
+CREATE PROCEDURE INST(IN nam varchar(20),IN x Decimal(4,2),IN y DECIMAL(4,2))
+BEGIN
+INSERT INTO Superhero1(NAME,LATITUDE,LONGITUDE)
+VALUES(nam,x,y);
+END >>
+SELECT * FROM superhero1;
+
+CALL INST('Batman',50.23,85.45);
+CALL INST('Spidermen',65.43,65.66);
+CALL INST('Thor',45.34,30.89);
+CALL INST('Deadpool',25.12,69.21);
+CALL INST('Hulk',30.34,20.98);
+CALL INST('Doctor Strange',40.45,40.56);
+CALL INST('Captain America',70.0,75.32);
+CALL INST('Avengers',81.32,90.84);
+CALL INST('Superman',85.32,45.78);
+
+
+DELIMITER ))
+CREATE PROCEDURE see1()
+BEGIN
+SELECT ID FROM superhero1 WHERE LATITUDE<50 AND LONGITUDE<50;
+END ))
+CALL see1;
+==========================================================================================================================================================
