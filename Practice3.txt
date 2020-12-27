@@ -1,0 +1,74 @@
+class Merge
+{
+	
+}
+public class Practice3 {
+	static int arr1[]= new int[]{1, 5, 9, 10, 15, 20};
+	static int arr2[]= new int []{2, 3, 8, 13};
+	 
+	
+public static void main(String[] args) 
+	{
+
+	   mergearray(arr1.length, arr2.length);
+	   System.out.print(Arrays.toString(arr1));
+	   System.out.print(Arrays.toString(arr2));
+		
+	}
+
+static void mergearray(int m,int n)
+{
+
+	for(int i=n-1;i>=0;i--)
+	{
+	   int last=arr1[m-1];
+	   for(int j=m-2;j>=0 && arr1[j]>arr2[i];j--)
+	   {
+		   arr1[j+1]=arr1[j];
+		   if(j!=m-2 || last>arr2[i])
+		   {
+			   arr1[j+1]=arr2[i];
+			   arr2[i]=last;
+		   }
+	   }
+	   
+	}
+}
+
+}
+=======================================================================================
+import java.util.Scanner;
+public class Practice4 {
+
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the number of values in array");
+		int a=sc.nextInt();
+				int arr[]=new int[a];
+		for(int i=0;i<arr.length;i++)
+		{
+			arr[i]=sc.nextInt();
+		}
+		System.out.println("Enter the sum");
+		int sum=sc.nextInt();
+		int count=0;
+		for(int i=0;i<arr.length;i++)
+		{
+			for(int j=i+1;j<arr.length;j++)
+			{
+				if(arr[i]+arr[j]==sum)
+				{
+					count++;
+				}
+			}
+			
+		}
+		System.out.printf("Count of pairs are %d", +count);
+
+		
+
+
+	}
+
+}
