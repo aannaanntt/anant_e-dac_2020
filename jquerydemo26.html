@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      
+		<style>
+		body{
+		margin:0px;
+		padding:0px;
+		}
+		.maindiv
+		{       display:none;
+				height:100%;
+				width:100%;
+				background-color:black;
+				position:fixed;
+				opacity:.2;
+				
+		}
+		.logindiv
+		{      display:none;
+				height:30%;
+				width:40%;
+				background-color:white;
+				position:fixed;
+				//left:30%;
+			//	top:30%;
+				border-radius:20px;
+				padding:20px;
+		}
+		</style>
+		<script>
+		$(document).ready(function(){
+		$("button").click(function(){
+		$(".maindiv").show();
+		$(".logindiv").show().animate({
+		
+				left:"300px",
+				top: "200px"
+				
+		});
+
+		 $(".maindiv").click(function(){
+		 $(".maindiv").hide();
+		 $(".logindiv").hide();
+		 
+		 });
+		
+		});
+		});
+		
+		</script>
+
+       
+    </head>
+    <body>
+
+ 
+ <div class="maindiv"> i am in main div </div>
+ <div class="logindiv"> 
+ <h3>login here</h3>
+ <input type="text" placeholder="enter mail" /> <br/>
+ <input type="password" placeholder="enter pasword"/>
+ <input type="submit" value="login"/>
+ </div>
+<button> login</button>
+    </body>
+</html>

@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+	<head>
+	<h1> JS ASSIGNMENT 1</h1>
+      <script>
+	  // self invocated function
+	   ( function()
+		{
+			document.write("i am self invoked");
+		})();
+			
+			
+		// function with function name
+		
+		function disp()
+		{
+			document.write("<br>");
+			document.write("HELLO EDAC");
+		}
+		
+		disp();
+		
+		//calling by object
+		
+		function display()
+		{
+				document.write("<br>");
+				return "Hello EDAC";
+		}
+		
+		var s= display();
+		document.write(s);
+		
+//q 2 declaration and assignment of object
+
+var fees=
+{
+			Rahul:100,
+			Sohan:300,
+			Vinay:700
+	     };
+		 
+		 //printing of object by for each loop
+			
+			
+		for(let f in fees)
+		{
+			document.write("<br>");
+			document.write(fees[f]);			
+		}
+//q3  array declaration and displaying it
+ var a=[10,700,600];
+ 
+  for(let i=0;i<a.length;i++)
+  {
+		document.write("<br>");
+		document.write(a[i]+"<br>");
+  }
+  //q3 checking if a number is integer or not
+function is_integer(x)
+{
+  this.x=x;
+  if(Number.isInteger(x))
+{
+		document.write("Given argument is an integer");
+}  
+else
+{
+	document.write("Not an integer");
+}
+}
+ 
+ is_integer(10);
+ 
+//q4 array summ
+   function add_array(x)
+				{
+				  var sum=0;
+				  for(let i=0;i<x.length;i++)
+				  {
+						sum=sum+x[i];
+				  }
+				  document.write(sum);
+				 }
+				 document.write("<br>");
+				 add_array([10,30,20]);
+//q5 converting temperature to celcius and  fahrenhiet
+//f to c
+              function degree(f){
+           var c=(5/9)*(f-32);
+           return c;
+       }
+	    document.write("<br>");
+       var ans=degree(100);
+       document.write(ans);
+	  
+	  
+//q6  faqctorial
+function fact(num)
+{
+  var g=1;
+  for(var i=2;i<=num;i++)
+  {
+	g=g*i;
+  }
+  return g;
+}
+  
+	
+var e= fact(5);
+	    document.write("<br>");
+		
+document.write(e);
+
+//q7 convert to coins
+
+function convert_to_coins(amount)
+{
+		var s=amount/2;
+		 document.write("<br>");
+		document.write("2 rs coins of given amount is :"+"  "+s);
+		var q=amount/5;
+		 document.write("<br>");
+		document.write("5 rs coins of given amount is :"+"  "+q);
+		var t=amount/10;
+		 document.write("<br>");
+		document.write("10 rs coins of given amount is :"+"  "+t);
+		var  y=amount/25;
+		 document.write("<br>");
+		document.write("25 rs coins of given amount is :"+"  "+y);
+		
+		
+		
+}
+
+convert_to_coins(100);
+			
+	
+			   
+		
+			</script>
+			
+		</head>
+</body>

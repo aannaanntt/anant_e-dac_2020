@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+	<head>
+      <script>
+
+     //function for inheritance
+	/* function extend(child,parent)
+	 {
+	   child.prototype=Object.create(parent.prototype);
+	   child.prototype=child;
+	   }
+	   
+	   //super class
+	   var Mobile=function(){
+	   
+	   } 
+	   
+	     //prototype member
+	/*	Mobile.prototype.show=function()
+							{
+									return "super class meethod";
+							}
+							
+							
+					//sub class
+					
+					var samsung=function(){
+							
+								}
+						extend(samsung,Mobile);
+						
+			   samsung.prototype.show= function(){
+										 return "sub class method";
+										}
+										
+					var sam=new samsung();
+					var mob=new Mobile();
+					document.write(sam.show());
+					document.write(mob.show());*/
+					
+				/*	class Mobile{
+					  display(){
+					   return "Protoype methhod"					  }
+					}
+
+                var nokia=new Mobile();
+              document.write(nokia.display());		
+
+			  class Mob{
+			    constructor(model_no){
+				  this.a=12;
+				  this.show= function(){
+				       return "Instance Member" 
+					   };
+					   }
+					   
+					   display(){
+					     return "prototype Member"
+						 }
+						 }
+						 var nokia =new Mob();
+						 document.write(nokia.a);
+						 	 document.write(nokia.show());*/
+							 
+							 class father{
+							     show(){
+								  return "super class method";
+							 }
+							 }
+							 class son extends father{
+									show(){
+									 return "SUBCLASS";
+							 
+							   }
+							   }
+								var s=new son();
+								document.write(s.show());
+								
+						 
+					
+					</script>
+			
+		</head>
+</body>

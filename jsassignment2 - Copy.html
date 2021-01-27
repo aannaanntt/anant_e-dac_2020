@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+	<head>
+	<h1> JS ASSIGNMENT 2</h1>
+      <script>
+	  
+	  //q1 closure function in this there is a function inside function and innerfunction can access outer function variables
+   function clo_sure()
+ {
+	var i=4;
+	document.write("This is outer function variable"+" "+i);
+	function innerfunction()
+	{
+	     var k=10;
+		 document.write("<br>");
+			document.write("this is the variable of inner loop"+" "+k);
+	} innerfunction()
+     
+}
+ clo_sure();
+			
+	// q2 reverse a string
+	//1 without using inbuilt function
+	  function reverse(str)
+	  {
+	     let newstr='';
+		 for(let i=str.length-1 ;i>=0 ;i--)
+		 {
+		    newstr+=str[i];
+		 }
+		 	 document.write("<br>");
+		 document.write(newstr);
+		 
+	  }
+	  reverse("EDAC");
+	  
+	  //2.with using inbuilt functions
+	  
+	  function rev(str)
+	  {
+			return(str.split('').reverse().join(' '));
+	  }
+	   document.write("<br>");
+document.write(rev("EDAC"));
+	
+	
+	//sort number using comparator
+	
+	/*const numbers = [2,5,100];
+	
+	const sortedNumbers = numbers.sort(a,b)
+						{
+						
+						  return a-b;
+						  }) ;
+						  
+		/*	document.write(sortedNumbers);
+			
+	var points = [40, 100, 1, 5, 25, 10];
+        var s=points.sort(function(a, b){
+                       return a - b}
+					   )
+					     document.write("<br>");
+						 
+		var d=new sort()
+	document.write(d.sort());*/
+	
+	// sorting by  an algorith
+	
+//Bubble sort
+let bubbleSort = (arr) => {
+  //Length of the array
+  let n = arr.length;
+  
+  for(let i = 0; i < n - 1; i++){
+    for(let j = 0; j <= n - i - 1; j++){
+        //Swap the numbers
+        if(arr[j] > arr[j+1]){
+          [arr[j], arr[j+1]] = [arr[j+1], arr[j]];
+        }
+    }
+  }
+  
+  return arr;
+}
+	
+			   
+		
+			</script>
+			
+		</head>
+</body>

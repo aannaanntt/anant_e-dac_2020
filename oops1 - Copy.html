@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+	<head>
+      <script>
+
+    //how to call private methods and variables
+	
+		/*	var Mobile= function(model_no,sprice)
+			{
+			this.model=model_no;
+			this.color='white';
+			this.sp=sprice;
+			var price=3000;
+			this.sellingprice=function(){
+			   return(price);
+			   };
+			   this.data=function(){
+					document.write("Model No:"+ this.model+"Price:"+ this.sellingprice());
+					}
+		};
+		  var samsung=new Mobile('Galaxy',2000);
+			document.write(samsung.sellingprice());*/
+			
+		/*	var Mobile= function(model_no)
+					{  //instance member
+						this.model=model_no;
+						this.price=3000;
+						};
+				var samsung =new Mobile('galaxy');
+				var nokia= new Mobile('3310');
+				Mobile.prototype.color='white'; //prototype member
+				
+				
+			 //  document.write(Object.keys(samsung));
+			   
+			   for(var keys in samsung)
+			   {
+					document.write(keys);
+			   }*/
+			   
+			   //it will retrn object.prototype
+			   
+			/*   console.log(Object.prototype);
+			   
+			   var b={};
+			   console.log(Object.getPrototypeOf(b));
+			   	   console.log(Object.getPrototypeOf(Object.prototype));
+				   var b1= new Object();
+				   	   console.log(Object.getPrototypeOf(b1));
+					   var b3= new Array();
+					      	   console.log(Object.getPrototypeOf(b3));*/
+							   
+		 //prototype object
+		/* function Mobile()
+		 {
+		 }
+		 console.log(Mobile.prototype);
+		 var lg=new Mobile();
+		 console.log(lg.__proto__);
+		 
+		 console.log(Mobile.prototype===lg.__proto__);*/
+		 
+		/* function Mobile()
+		 {
+		 }
+		 Mobile.prototype.a=10;
+		 var lg= new Mobile();
+		 console.log(lg.a);*/
+		 
+		 
+		 //function for inheritance
+		/* function extend(child,parent)
+		 {
+				child.prototype=Object.create(parent.prototype);
+				child.prototype.constructor= child;
+		 }		 
+					   //super class
+			   var Mobile=function()
+			   {
+			   }
+			   
+			   Mobile.prototype.getmodel=function()
+									{ return this.model;
+									}
+									//subclass 1
+					var samsung=function(model,price)
+							{ this.model=model;
+							  this.price=price;
+							  }
+							   //inheritance code
+
+							samsung.prototype.getprice=function()  //only available to samsung
+										{
+											return this.price;
+										}
+					  //subclass2
+					var Lenovo=function(model){
+							this.model=model;
+							}
+							
+								//inheritance code
+								extend(samsung,Mobile);
+								extend(Lenovo,Mobile);
+						
+						var galaxy=new samsung('galaxy',3000);
+						document.write(galaxy.getmodel());
+						document.write(galaxy.getprice());*/
+						
+			/*	var Mobile=function(model)
+				{
+						this.model=model;
+				}
+				Mobile.prototype.getModel=function()
+						{ return this.model;}
+						
+						var Samsung= function(price){
+						Mobile.call(this,price)
+						this.price=price;
+						}
+						
+				//inheritance
+				
+				Samsung.protoype=Object.create(Mobile.prototype);
+				Samsung.prototype.constructor=Samsung;
+				
+				var galaxy=new Samsung('galaxy',3000);
+				console.log(galaxy.getModel());
+				console.log(galaxy.price);*/
+							
+			   
+			   
+			</script>
+			
+		</head>
+</body>

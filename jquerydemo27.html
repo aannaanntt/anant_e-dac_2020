@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      
+		<style>
+	.main{
+	height:100%;
+	width:100%;
+	opacity:.3;
+	display:none;
+	position:absolute;
+	
+	}
+	.image{
+	height:500px;
+	width:500px;
+	background-color:white;
+	display:none;
+	position:absolute;
+    left:30%;
+	top:15%;
+	}
+	.gallery_img:hover
+	{
+	  cursor:pointer;
+	}
+
+		</style>
+		<script>
+		     $(document).ready(function(){
+			$(".gallery_img").click(function(){
+			 var img_src=$(this).attr("src")
+			 
+			$(".main").css("display","block")
+			$(".image").css("display","block")
+			$("#show_img").attr("src",img_src)
+			
+			
+			});
+			$(".main").click(function(){
+			$(".main").css("display","none")
+			$(".image").css("display","none")
+					//	alert(img_src);
+			});
+			});
+		
+		</script>
+
+       
+    </head>
+    <body>
+
+ 
+<div class="main"> main div</div>
+<div class="image"> 
+ <img id ="show_img" src="https://wallpapercave.com/wp/ig6eZD1.jpg" height="100%" width="100%"/>
+</div>  
+<img src="https://www.wallpaperwolf.com/wallpapers/wallpapers-for-phones/hd/download/joker-splash-0146.png" height="200" width="200" class="gallery_img"/>
+<img src="http://getwallpapers.com/wallpaper/full/c/8/5/952967-dark-knight-joker-wallpaper-1242x2208-ios.jpg" height="200" width="200" class="gallery_img"/>
+<img src="https://images.hdqwalls.com/wallpapers/joker-smile-4k-62.jpg" height="200" width="200" class="gallery_img"/>
+<img src="https://i.imgflip.com/3etug2.jpg" height="200" width="200"/>
+    </body>
+</html>
